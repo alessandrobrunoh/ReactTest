@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import TodoList from "./TodoList";
 
 export default function Test() {
   const [count, setCount] = useState(0);
@@ -41,8 +40,6 @@ export default function Test() {
       >
         Reset
       </button>
-
-      <TodoList items={["Item 1", "Item 2", "Item 3"]} />
     </>
   );
 }

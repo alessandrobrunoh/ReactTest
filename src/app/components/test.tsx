@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import UserList from "./UserList";
 
 export default function Test() {
   const [count, setCount] = useState(0);
@@ -22,24 +23,27 @@ export default function Test() {
       <h1>Test Component</h1>
       {customHtml()}
       <p>Count: {count}</p>
-      <button
-        className="bg-blue-500 text-white px-4 py-2 rounded"
-        onClick={increment}
-      >
-        Increment
-      </button>
-      <button
-        className="bg-green-500 text-white px-4 py-2 rounded"
-        onClick={decrement}
-      >
-        Decrement
-      </button>
-      <button
-        className="bg-red-500 text-white px-4 py-2 rounded"
-        onClick={reset}
-      >
-        Reset
-      </button>
+      <div className="flex flex-row items-center gap-3">
+        <button
+          className="bg-blue-500 text-white px-4 py-2 rounded"
+          onClick={increment}
+        >
+          Increment
+        </button>
+        <button
+          className="bg-green-500 text-white px-4 py-2 rounded"
+          onClick={decrement}
+        >
+          Decrement
+        </button>
+        <button
+          className="bg-red-500 text-white px-4 py-2 rounded"
+          onClick={reset}
+        >
+          Reset
+        </button>
+      </div>
+      <UserList />
     </>
   );
 }
